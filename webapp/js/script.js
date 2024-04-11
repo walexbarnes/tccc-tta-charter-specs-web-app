@@ -43,11 +43,11 @@ function generateSpecification() {
         specification = {
             event: isThirdParty ? "sendFirebaseEvent" : "charter_event",
             name: isThirdParty ? "local_event" : undefined,
-            user_action: eventType,
+            user_action: "virtual_page_view",
             user_action_detail: userActionDetail,
-            ux_element: userActionDetail,
-            child_ux_element: userActionDetail,
-            child_ux_element_link: userActionDetail,
+            ux_element: "virtual_page_view",
+            child_ux_element: "virtual_page_view",
+            child_ux_element_link: "virtual_page_view",
         };
     }
 
