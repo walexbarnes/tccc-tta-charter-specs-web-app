@@ -57,6 +57,33 @@ function generateSpecification() {
     displaySpecification(specification);
 }
 
+function displayImagePreview() {
+    const fileInput = document.getElementById('image-upload');
+    const outputContainer = document.getElementById('specification-output');
+    
+    // Clear previous output
+    outputContainer.innerHTML = '';
+
+    if (fileInput.files && fileInput.files[0]) {
+        const reader = new FileReader();
+
+        reader.onload = function(e) {
+            // Create an image element and set its source to the uploaded file
+            const img = document.createElement('img');
+            img.src = e.target.result;
+            img.style.maxWidth = '200px'; // Set a max width for the image preview
+            img.style.marginRight = '20px'; // Add some spacing between the image and the code
+
+            // Append the image to the output container
+            outputContainer.appendChild(img);
+        };
+
+        // Read the file as a Data URL to trigger the onload event
+        reader.readAsDataURL(fileInput.files[0]);
+    }
+}
+
+
 function displaySpecification(specification) {
     const outputContainer = document.getElementById('output-container');
     outputContainer.textContent = JSON.stringify(specification, null, 2);
