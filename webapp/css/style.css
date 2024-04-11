@@ -7,4 +7,12 @@
     width: 50%;
     float: left;
     padding: 20px;
-}  
+    box-sizing: border-box; /* Include padding in the element's total width */
+}
+
+/* Clearfix */
+.float-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
