@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tagging Specification Tool</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Tagging Specification Creator</h1>
+    </header>
+    <main>
+        <section id="specification-form">
+            <h2>Create New Specification</h2>
+            <button id="add-data-layer-push">Add Data Layer Push</button>
+            <!-- Placeholder for the wizard form starts here -->
+            <form id="data-layer-form" style="display:none;">
+                <label for="event-type">Event Type:</label>
+                <select id="event-type" name="event-type">
+                    <option value="interaction">Interaction</option>
+                    <option value="progression">Progression</option>
+                </select>
+
+                <div id="interaction-details" style="display:none;">
+                    <label for="interaction-type">Interaction Type:</label>
+                    <select id="interaction-type" name="interaction-type">
+                        <option value="click">Click</option>
+                        <option value="submit">Submit</option>
+                        <option value="play">Play</option>
+                        <option value="download">Download</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label for="ux-element">UX Element:</label>
+                    <select id="ux-element" name="ux-element">
+                        <option value="button">Button</option>
+                        <option value="header">Header</option>
+                        <!-- Add other options as needed -->
+                    </select>
+
+                    <label for="element-detail">Element Detail:</label>
+                    <input type="text" id="element-detail" name="element-detail" placeholder="Description or name">
+
+                    <label for="element-link">Element Link (optional):</label>
+                    <input type="text" id="element-link" name="element-link" placeholder="URL or 'N/A'">
+                </div>
+
+                <div id="progression-details" style="display:none;">
+                    <label for="page-view">Page or Screen Viewed:</label>
+                    <input type="text" id="page-view" name="page-view" placeholder="Description">
+                </div>
+
+                <button type="submit">Generate Specification</button>
+            </form>
+            <!-- Placeholder for the wizard form ends here -->
+        </section>
+
+        <section id="specification-output">
+            <h2>Specification Output</h2>
+            <!-- Placeholder where the specification output will be displayed -->
+            <pre id="output-container"></pre>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
