@@ -89,6 +89,7 @@ function displayImagePreview() {
 function displaySpecification(specification) {
     const outputContainer = document.getElementById('output-container');
     outputContainer.textContent = JSON.stringify(specification, null, 2);
+    console.log(JSON.stringify(specification, null, 2));
 }
 
 function clearFormInputs() {
