@@ -64,7 +64,10 @@
          <!-- Specification Output Section -->
          <section id="specification-output" style="display: flex; align-items: center; flex-wrap: wrap;">
             <h2>Specification Output</h2>
-            <pre id="output-container"></pre> <!-- This section will dynamically display the image and code output -->
+            <div id="parent-output-container" class="float-container">
+            <div id="child-output-image" class="float-child"></div>
+            <div id="child-output-json" class="float-child"></div>
+            </div>
          </section>
       </main>
       <script src="js/script.js"></script>
