@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         generateSpecification();
         displayImagePreview();
-        clearFormInputs();
+        setTimeout(clearFormInputs,1000);
     });
 });
 
