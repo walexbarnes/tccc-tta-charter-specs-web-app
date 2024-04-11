@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         generateSpecification();
         displayImagePreview();
+        clearFormInputs();
     });
 });
 
@@ -88,4 +89,30 @@ function displayImagePreview() {
 function displaySpecification(specification) {
     const outputContainer = document.getElementById('output-container');
     outputContainer.textContent = JSON.stringify(specification, null, 2);
+}
+
+function clearFormInputs() {
+    // Reset text inputs and select elements to their default values
+    const textInputs = document.querySelectorAll('#data-layer-form input[type="text"], #data-layer-form select');
+    textInputs.forEach(input => {
+        if (input.tagName === 'SELECT') {
+            input.selectedIndex = 0;
+        } else {
+            input.value = '';
+        }
+    });
+
+    // Special handling for file input to ensure it's cleared
+    const fileInput = document.getElementById('image-upload');
+    fileInput.value = '';
+
+    // Hide additional detail sections that may have been shown based on previous interactions
+    document.getElementById('interaction-details').style.display = 'none';
+    document.getElementById('progression-details').style.display = 'none';
+
+    // Optionally, uncheck any checkboxes (like the third-party checkbox)
+    const checkboxes = document.querySelectorAll('#data-layer-form input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = false;
+    });
 }
