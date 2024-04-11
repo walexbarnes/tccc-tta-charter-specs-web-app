@@ -61,7 +61,7 @@ function generateSpecification() {
 
 function displayImagePreview() {
     const fileInput = document.getElementById('image-upload');
-    const outputContainer = document.getElementById('specification-output');
+    const outputContainer = document.getElementById('output-container');
     
     // Clear previous output
     outputContainer.innerHTML = '';
