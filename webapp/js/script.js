@@ -61,7 +61,7 @@ function generateSpecification() {
 
 function displayImagePreview() {
     const fileInput = document.getElementById('image-upload');
-    const outputContainer = document.getElementById('output-container');
+    const outputContainer = document.getElementById('child-output-image');
     
     // Clear previous output
     outputContainer.innerHTML = '';
@@ -87,7 +87,7 @@ function displayImagePreview() {
 
 
 function displaySpecification(specification) {
-    const outputContainer = document.getElementById('output-container');
+    const outputContainer = document.getElementById('child-output-json');
     outputContainer.textContent = JSON.stringify(specification, null, 2);
     console.log(JSON.stringify(specification, null, 2));
 }
