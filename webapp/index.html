@@ -1,82 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tagging Specification Tool</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <h1>Tagging Specification Creator</h1>
-    </header>
-    <main>
-        <section id="specification-form">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Tagging Specification Tool</title>
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+   <body>
+      <header>
+         <h1>Tagging Specification Creator</h1>
+      </header>
+      <main>
+         <section id="specification-form">
             <h2>Create New Specification</h2>
-                
             <button id="add-data-layer-push">Add Data Layer Push</button>
             <!-- Form for specification details -->
             <form id="data-layer-form" style="display:none;">
-<!-- Image Upload Field -->
-    <label for="image-upload">Upload Image:</label>
-    <input type="file" id="image-upload" name="image-upload" accept="image/*">
-                <br>
-                <!-- Event Type Selection -->
-                <label for="event-type">Event Type:</label>
-                <select id="event-type" name="event-type">
-                    <option value="interaction">Interaction</option>
-                    <option value="progression">Progression</option>
-                </select>
-
-                <!-- Interaction Details -->
-                <div id="interaction-details" style="display:none;">
-                    <label for="interaction-type">Interaction Type:</label>
-                    <select id="interaction-type" name="interaction-type">
-                        <option value="click">Click</option>
-                        <option value="submit">Submit</option>
-                        <option value="play">Play</option>
-                        <option value="download">Download</option>
-                        <option value="other">Other</option>
-                    </select>
-
-                    <label for="ux-element">UX Element:</label>
-                    <select id="ux-element" name="ux-element">
-                        <option value="button">Button</option>
-                        <option value="header">Header</option>
-                        <!-- Additional options as necessary -->
-                    </select>
-
-                    <label for="element-detail">Element Detail:</label>
-                    <input type="text" id="element-detail" name="element-detail" placeholder="Description or name">
-
-                    <label for="element-link">Element Link (optional):</label>
-                    <input type="text" id="element-link" name="element-link" placeholder="URL or 'N/A'">
-                </div>
-
-                <!-- Progression Details -->
-                <div id="progression-details" style="display:none;">
-                    <label for="page-view">Page or Screen Viewed:</label>
-                    <input type="text" id="page-view" name="page-view" placeholder="Description">
-                </div>
-
-                <!-- Third-Party Experience Checkbox -->
-                <div>
-                    <label for="third-party">Is this for a third-party experience?</label>
-                    <input type="checkbox" id="third-party" name="third-party">
-                </div>
-
-                <!-- Submit Button -->
-                <button type="submit">Generate Specification</button>
+               <!-- Image Upload Field -->
+               <label for="image-upload">Upload Image:</label>
+               <input type="file" id="image-upload" name="image-upload" accept="image/*">
+               <br>
+               <!-- Event Type Selection -->
+               <label for="event-type">Event Type:</label>
+               <select id="event-type" name="event-type">
+                  <option value="interaction">Interaction</option>
+                  <option value="progression">Progression</option>
+               </select>
+               <!-- Interaction Details -->
+               <div id="interaction-details" style="display:none;">
+                  <label for="interaction-type">Interaction Type:</label>
+                  <select id="interaction-type" name="interaction-type">
+                     <option value="click">Click</option>
+                     <option value="submit">Submit</option>
+                     <option value="play">Play</option>
+                     <option value="download">Download</option>
+                     <option value="other">Other</option>
+                  </select>
+                  <label for="ux-element">UX Element:</label>
+                  <select id="ux-element" name="ux-element">
+                     <option value="button">Button</option>
+                     <option value="header">Header</option>
+                     <!-- Additional options as necessary -->
+                  </select>
+                  <label for="element-detail">Element Detail:</label>
+                  <input type="text" id="element-detail" name="element-detail" placeholder="Description or name">
+                  <label for="element-link">Element Link (optional):</label>
+                  <input type="text" id="element-link" name="element-link" placeholder="URL or leave blank'">
+               </div>
+               <!-- Progression Details -->
+               <div id="progression-details" style="display:none;">
+                  <label for="page-view">Page or Screen Viewed:</label>
+                  <input type="text" id="page-view" name="page-view" placeholder="Description">
+               </div>
+               <!-- Third-Party Experience Checkbox -->
+               <div>
+                  <label for="third-party">Is this for a third-party experience?</label>
+                  <input type="checkbox" id="third-party" name="third-party">
+               </div>
+               <!-- Submit Button -->
+               <button type="submit">Generate Specification</button>
             </form>
-        </section>
-
-        <!-- Specification Output Section -->
-        <section id="specification-output">
+         </section>
+         <!-- Specification Output Section -->
+         <section id="specification-output">
             <h2>Specification Output</h2>
             <pre id="output-container"></pre>
-        </section>
-    </main>
-
-    <script src="js/script.js"></script>
-</body>
+         </section>
+      </main>
+      <script src="js/script.js"></script>
+   </body>
 </html>
