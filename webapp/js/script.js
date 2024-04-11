@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         generateSpecification();
         displayImagePreview();
+        document.getElementById('data-layer-form').style.display = 'none';
         setTimeout(clearFormInputs,1000);
     });
 });
