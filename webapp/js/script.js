@@ -117,12 +117,7 @@ function clearFormInputs() {
         checkbox.checked = false;
     });
 
-    // Get the select element 
-var select = document.getElementById("event-type"); 
- 
-// Get the selected option 
-var selectedOption = select.options[select.selectedIndex]; 
- 
-// Change the value of the selected option 
-selectedOption.value = "newValue"; 
+    // Reset the select element 
+    var selectOption = document.getElementById("event-type").options[0];
+    selectOption.selected = true
 }
