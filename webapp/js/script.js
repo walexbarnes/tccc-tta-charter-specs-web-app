@@ -116,4 +116,13 @@ function clearFormInputs() {
     checkboxes.forEach(checkbox => {
         checkbox.checked = false;
     });
+
+    // Get the select element 
+var select = document.getElementById("event-type"); 
+ 
+// Get the selected option 
+var selectedOption = select.options[select.selectedIndex]; 
+ 
+// Change the value of the selected option 
+selectedOption.value = "newValue"; 
 }
