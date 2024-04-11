@@ -14,14 +14,16 @@
         <section id="specification-form">
             <h2>Create New Specification</h2>
             <button id="add-data-layer-push">Add Data Layer Push</button>
-            <!-- Placeholder for the wizard form starts here -->
+            <!-- Form for specification details -->
             <form id="data-layer-form" style="display:none;">
+                <!-- Event Type Selection -->
                 <label for="event-type">Event Type:</label>
                 <select id="event-type" name="event-type">
                     <option value="interaction">Interaction</option>
                     <option value="progression">Progression</option>
                 </select>
 
+                <!-- Interaction Details -->
                 <div id="interaction-details" style="display:none;">
                     <label for="interaction-type">Interaction Type:</label>
                     <select id="interaction-type" name="interaction-type">
@@ -36,7 +38,7 @@
                     <select id="ux-element" name="ux-element">
                         <option value="button">Button</option>
                         <option value="header">Header</option>
-                        <!-- Add other options as needed -->
+                        <!-- Additional options as necessary -->
                     </select>
 
                     <label for="element-detail">Element Detail:</label>
@@ -46,19 +48,26 @@
                     <input type="text" id="element-link" name="element-link" placeholder="URL or 'N/A'">
                 </div>
 
+                <!-- Progression Details -->
                 <div id="progression-details" style="display:none;">
                     <label for="page-view">Page or Screen Viewed:</label>
                     <input type="text" id="page-view" name="page-view" placeholder="Description">
                 </div>
 
+                <!-- Third-Party Experience Checkbox -->
+                <div>
+                    <label for="third-party">Is this for a third-party experience?</label>
+                    <input type="checkbox" id="third-party" name="third-party">
+                </div>
+
+                <!-- Submit Button -->
                 <button type="submit">Generate Specification</button>
             </form>
-            <!-- Placeholder for the wizard form ends here -->
         </section>
 
+        <!-- Specification Output Section -->
         <section id="specification-output">
             <h2>Specification Output</h2>
-            <!-- Placeholder where the specification output will be displayed -->
             <pre id="output-container"></pre>
         </section>
     </main>
