@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('data-layer-form').addEventListener('submit', function(event) {
         event.preventDefault();
         generateSpecification();
+        displayImagePreview();
     });
 });
 
