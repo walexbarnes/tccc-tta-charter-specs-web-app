@@ -57,7 +57,7 @@ function generateSpecification() {
     // Remove undefined properties for cleaner output
     Object.keys(specification).forEach(key => specification[key] === undefined && delete specification[key]);
 
-    displaySpecification(specification);
+    displaySpecification(isThirdParty, specification);
 }
 
 function displayImagePreview() {
@@ -87,7 +87,7 @@ function displayImagePreview() {
 }
 
 
-function displaySpecification(specification) {
+function displaySpecification(isThirdParty, specification) {
     const outputContainer = document.getElementById('child-output-json');
     outputContainer.textContent = JSON.stringify(specification, null, 2);
     console.log(JSON.stringify(specification, null, 2));
