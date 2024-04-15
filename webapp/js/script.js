@@ -46,6 +46,7 @@ function generateSpecification() {
         specification = {
             event: isThirdParty ? "sendFirebaseEvent" : "charter_event",
             name: isThirdParty ? "local_event" : undefined,
+            routing_instructions: isThirdParty ? "iframe_message" : undefined, 
             user_action: "virtual_page_view",
             user_action_detail: userActionDetail,
             ux_element: "virtual_page_view",
