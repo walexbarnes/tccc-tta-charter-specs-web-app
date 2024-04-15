@@ -33,8 +33,7 @@ function generateSpecification() {
 
     if (eventType === 'interaction') {
         specification = {
-            event: isThirdParty ? "sendFirebaseEvent" : "charter_event",
-            name: isThirdParty ? "local_event" : undefined,
+            event: "charter_event",
             routing_instructions: isThirdParty ? "iframe_message" : undefined, 
             user_action: eventType,
             user_action_detail: document.getElementById('interaction-type').value,
@@ -45,8 +44,7 @@ function generateSpecification() {
     } else if (eventType === 'progression') {
         const userActionDetail = document.getElementById('page-view').value;
         specification = {
-            event: isThirdParty ? "sendFirebaseEvent" : "charter_event",
-            name: isThirdParty ? "local_event" : undefined,
+            event: "charter_event",
             routing_instructions: isThirdParty ? "iframe_message" : undefined, 
             user_action: "virtual_page_view",
             user_action_detail: userActionDetail,
