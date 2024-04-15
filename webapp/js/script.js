@@ -89,8 +89,10 @@ function displayImagePreview() {
 
 function displaySpecification(isThirdParty, specification) {
     const outputContainer = document.getElementById('child-output-json');
-    outputContainer.textContent = JSON.stringify(specification, null, 2);
-    console.log(JSON.stringify(specification, null, 2));
+    const jsonPayload = JSON.stringify(specification, null, 2)
+    const preWrap = isThirdParty ? "window.parent.postMessage(" : "dataLayer.push(" 
+    outputContainer.textContent = preWrap + jsonPayload + ")"
+    console.log(jsonPayload);
 }
 
 function clearFormInputs() {
